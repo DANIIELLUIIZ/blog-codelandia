@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: 'Lexend Deca';
+}
+:root {
+  --bg-main: #f3f5f7;
+  --bg-article: #ffffff;
+  --bg-header-1: #574ae8;
+  --bg-header-2: #2962ff;
+  --text-dark-10: #1a202c;
+  --text-dark-20: #717171;
+  --text-dark-30: #f3f5f7;
+  --heart-icon-active: #f03d3d;
+  --bg-input: #f3f5f741;
+}
+
+body {
+  max-width: 100%;
+  max-height: 100vh;
+  background-color: var(--bg-main);
+  font-weight: 400;
+}
+
+.container {
+  display: flex;
+  max-width: 100%;
+  flex-direction: column;
+  margin: 0 auto;
+}
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%;
+  padding: 1rem;
+  gap: 3rem;
+  background: linear-gradient(
+    90deg,
+    var(--bg-header-2) 0%,
+    rgba(84, 168, 185, 1) 100%
+  );
+}
+header .title {
+  display: inline-flex;
+  width: 900px;
+  align-items: center;
+  margin: 1rem;
+  justify-content: space-between;
+  font-size: 24px;
+  color: var(--text-dark-30);
+}
+header .title h3 {
+  position: relative;
+  font-weight: 400;
+}
+header .search-box {
+  display: flex;
+  width: 900px;
+  min-width: 100px;
+  align-items: center;
+  height: 65px;
+  padding: 0 1rem;
+  margin: 1.5rem 0;
+  border-radius: 5px;
+  gap: 1rem;
+  background-color: var(--bg-input);
+}
+header .search {
+  width: 1000%;
+  height: 100%;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+header .search::placeholder {
+  font-size: 18px;
+  font-weight: 500;
+  opacity: 0.7;
+  color: var(--text-dark-30);
+}
+
+main {
+  max-width: 900px;
+  margin: 1rem auto;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.5rem;
+  margin-top: 3rem;
+  border-radius: 5px;
+  background-color: var(--bg-article);
+}
+.box-title {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+.box-title > button {
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.box-title span {
+  color: var(--text-dark-20);
+}
+
+article > h1 {
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 32.5px;
+  color: var(--text-dark-10);
+}
+
+article > p {
+  color: var(--text-dark-20);
+  font-size: 18px;
+  line-height: 32px;
+}
+
+@media (max-width: 930px) {
+  header,
+  main {
+    padding: 1rem 2rem;
+  }
+
+  header .title {
+    max-width: 100%;
+  }
+  header .search-box {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  header .title {
+    font-size: 18px;
+  }
+  header,
+  main {
+    padding: 1rem 0.5rem;
+  }
+
+  header .search-box {
+    gap: 0.5rem;
+  }
+  header .search::placeholder {
+    font-size: 16px;
+  }
+  article {
+    padding: 1rem 0.5rem;
+  }
+}
