@@ -72,9 +72,12 @@ header .search-box {
 header .search {
   width: 1000%;
   height: 100%;
+  font-size: 18px;
+  font-weight: 400;
   border: none;
   outline: none;
   background-color: transparent;
+  color: var(--bg-main);
 }
 header .search::placeholder {
   font-size: 18px;
@@ -124,6 +127,15 @@ article > p {
   color: var(--text-dark-20);
   font-size: 18px;
   line-height: 32px;
+}
+button > i {
+  font-size: 20px;
+  padding: 0.3rem;
+  color: var(--bg-header-1);
+}
+button > i.active {
+  font-size: 20px;
+  color: var(--heart-icon-active);
 }
 
 @media (max-width: 930px) {
