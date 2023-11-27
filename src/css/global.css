@@ -171,3 +171,7 @@ button > i.active {
     padding: 1rem 0.5rem;
   }
 }
+
+.hide {
+  display: none;
+}
